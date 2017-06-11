@@ -16,14 +16,20 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from openSource.views import HomeView
+from openSource.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^camera/', include('camera.urls', namespace='camera')),
     url(r'^crimer/', include('crimer.urls', namespace='crimer')),
-    url(r'^community/', include('community.urls', namespace='community')),
+    # url(r'^community/', include('community.urls', namespace='community')),
     url(r'^introduce/', include('introduce.urls', namespace='introduce')),
+    url(r'^com/', include('jejudaum.urls', namespace='jejudaum')),
+
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
+    url(r'^accounts/register/done/$', UserCreateDoneTV.as_view(), name='register_done'),
+
 
     url(r'^$', HomeView.as_view(), name='home'),
 ]

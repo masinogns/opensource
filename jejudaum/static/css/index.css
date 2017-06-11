@@ -1,0 +1,33 @@
+.navbar-inverse .navbar-nav>.login-hover>a:hover{
+  color: white;
+  background-color: rgb(241, 196, 15);
+}
+
+p.index {
+  font-size: 40px;
+}
+
+.navbar{
+  background-color: white;
+  border: 0;
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0;
+}
+
+.navbar-brand{
+  padding: 0;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+.footer {
+  background-color: rgb(241, 196, 15);
+  margin-top: 20px;
+}
+
+.footer p {
+  text-align: center;
+  padding: 10px 0;
+}

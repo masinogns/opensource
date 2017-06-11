@@ -1,0 +1,28 @@
+{% extends "com.html" %}
+
+{% load staticfiles %}
+
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/comunity_detail.css' %}">
+
+<div class="container">
+  <div class="page-header">
+    <div class="info">
+      <p class="title">제목 : {{object.title}}</p>
+      <p class="writer">작성자 : {{object.owner}}</p>
+      <p class="date">날짜 : {{object.create_date}}</p>
+    </div>
+  </div>
+  <div class="content-box">
+    <p>{{object.content}}</p>
+  </div>
+
+  <a href="{% url 'jejudaum:room_list'%}" class="btn btn-default">리스트로 가기</a>
+</div>
+
+
+
+
+
+
+{%endblock content%}

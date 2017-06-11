@@ -71,13 +71,30 @@
                     <a href="/"><img src="{% static 'img/logo.png' %}" alt="" style="width:200px;"></a>
                 </div>
                 <div class="navbar-collapse collapse ">
+
                   <ul class="nav navbar-nav">
                       <li><a id="nav" href="{% url 'introduce:index'%}">안심벨 소개</a></li>
                       <li><a id="nav" href="{% url 'crimer:index'%}">성범죄자 조회</a></li>
                       <li><a id="nav" href="{% url 'camera:index'%}">몰래카메라</a></li>
-                      <li><a id="nav" href="{% url 'community:index'%}">커뮤니티</a></li>
+                      <li><a id="nav" href="{% url 'jejudaum:room_list'%}">커뮤니티</a></li>
                   </ul>
+                  <div class="">
+                    {% if user.is_active %}
+                      <ul class="nav navbar-nav ">
+                          <li class="login-hover"><a href="#">{% firstof user.get_short_name user.get_username %}</a></li>
+                          <li class="login-hover"><a href="#">내 게시글</a></li>
+                          <li class="login-hover"><a href="{% url 'password_change' %}"><span class="glyphicon glyphicon-log-in"></span> 비밀번호 변경</a></li>
+                          <li class="login-hover"><a href="{% url 'logout'%}"><span class="glyphicon glyphicon-pencil"></span> 로그아웃</a></li>
+                      </ul>
+                    {% else %}
+                    <ul class="nav navbar-nav ">
+                      <li class="login-hover"><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+                      <li class="login-hover"><a href="{% url 'register'%}"><span class="glyphicon glyphicon-pencil"></span> 회원가입</a></li>
+                    </ul>
+                    {% endif %}
+                  </div>
                 </div>
+
             </div>
         </div>
 	</header>

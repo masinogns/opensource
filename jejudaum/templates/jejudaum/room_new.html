@@ -1,0 +1,41 @@
+{% extends "com.html" %}
+
+{% load staticfiles %}
+
+
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/content_uploader.css' %}">
+<div class="container">
+  <div class="page-header">
+    <h3>추가/수정</h3>
+  </div>
+
+  <form method="post" class="comunity-form">
+      {% csrf_token %}
+      {# {{ form.as_p }}#}
+      <fieldset class="aligned">
+
+          <div class="form-row">
+            <h3>TITLE</h3>
+            <div class="input-box">
+                {{ form.title  }}
+            </div>
+          </div>
+
+          <div class="form-row">
+            <h3>content</h3>
+            <div class="content">
+              {{form.content}}
+            </div>
+          </div>
+
+      </fieldset>
+      <div class="submit-box">
+          <input type="submit" value="Submit" class="btn btn-default" />
+      </div>
+
+  </form>
+</div>
+
+
+{%endblock content%}
