@@ -27,14 +27,20 @@
     Author URL: https://bootstrapmade.com
 ======================================================= -->
 <style media="screen">
-  a > span:hover{
-    background-color: rgb(104, 164, 196);
+
+  /*a > span:hover{
+    /*background-color: rgb(104, 164, 196);*/
+    /*color: black;*/
+  /*}*/
+
+  #ef{
+    color: gray;
   }
 
-  a > span:active{
+  #ef:hover{
     color: rgb(104, 164, 196);
   }
-  
+
   .col-md-3{
     width:25%;
     height:  500px;
@@ -43,6 +49,11 @@
     width:75%;
     height:  500px;
   }
+#nav{
+  color: gray;
+  font-size: 23px;
+}
+
 </style>
 </head>
 <body>
@@ -61,10 +72,10 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                   <ul class="nav navbar-nav">
-                      <li><a href="{% url 'introduce:index'%}">안심벨 소개</a></li>
-                      <li><a href="{% url 'crimer:index'%}">성범죄자 조회</a></li>
-                      <li><a href="{% url 'camera:index'%}">몰래카메라</a></li>
-                      <li><a href="{% url 'community:index'%}">커뮤니티</a></li>
+                      <li><a id="nav" href="{% url 'introduce:index'%}">안심벨 소개</a></li>
+                      <li><a id="nav" href="{% url 'crimer:index'%}">성범죄자 조회</a></li>
+                      <li><a id="nav" href="{% url 'camera:index'%}">몰래카메라</a></li>
+                      <li><a id="nav" href="{% url 'community:index'%}">커뮤니티</a></li>
                   </ul>
                 </div>
             </div>
@@ -75,10 +86,10 @@
     <div class="row" >
       <div class="col-md-3">
         <br><br><br>
-        <a class="navbar-brand" href="{%block srcone%}{%endblock%}" ><span class="ef" style="color: gray;">{%block onetitle%}{%endblock%}</span></a><br><br>
-        <a class="navbar-brand" href="{%block srctwo%}{%endblock%}" ><span class="ef" style="color:gray;">{%block twotitle%}{%endblock%}</span></a><br><br>
-        <a class="navbar-brand" href="{%block srcthree%}{%endblock%}" ><span class="ef" style="color: gray;">{%block threetitle%}{%endblock%}</span></a><bR><br>
-        <a class="navbar-brand" href="{%block srcfour%}{%endblock%}" ><span class="ef" style="color: gray;">{%block fourtitle%}{%endblock%}</span></a><br><br>
+        <a class="navbar-brand" href="{%block srcone%}{%endblock%}" ><span id="ef">{%block onetitle%}{%endblock%}</span></a><br><br>
+        <a class="navbar-brand" href="{%block srctwo%}{%endblock%}" ><span id="ef">{%block twotitle%}{%endblock%}</span></a><br><br>
+        <a class="navbar-brand" href="{%block srcthree%}{%endblock%}" ><span id="ef" >{%block threetitle%}{%endblock%}</span></a><bR><br>
+        <a class="navbar-brand" href="{%block srcfour%}{%endblock%}" ><span id="ef" >{%block fourtitle%}{%endblock%}</span></a><br><br>
       </div>
       <div class="col-md-9">
         <br><br><br>

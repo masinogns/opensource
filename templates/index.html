@@ -27,6 +27,35 @@
 ======================================================= -->
 
 </head>
+<style media="screen">
+
+  /*a > span:hover{
+    /*background-color: rgb(104, 164, 196);*/
+    /*color: black;*/
+  /*}*/
+
+  #ef{
+    color: gray;
+  }
+
+  #ef:hover{
+    color: rgb(104, 164, 196);
+  }
+
+  .col-md-3{
+    width:25%;
+    height:  500px;
+  }
+  .col-md-9{
+    width:75%;
+    height:  500px;
+  }
+#nav{
+  color: gray;
+  font-size: 23px;
+}
+
+</style>
 <body>
 <div id="wrapper">
 	<!-- start header -->
@@ -42,12 +71,12 @@
                     <a href="/"><img src="{% static 'img/logo.png' %}" alt="" style="width:200px;"></a>
                 </div>
                 <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{% url 'introduce:index'%}">안심벨 소개</a></li>
-                        <li><a href="{% url 'crimer:index'%}">성범죄자 조회</a></li>
-                        <li><a href="{% url 'camera:index'%}">몰래카메라</a></li>
-                        <li><a href="{% url 'community:index'%}">커뮤니티</a></li>
-                    </ul>
+									<ul class="nav navbar-nav">
+                      <li><a id="nav" href="{% url 'introduce:index'%}">안심벨 소개</a></li>
+                      <li><a id="nav" href="{% url 'crimer:index'%}">성범죄자 조회</a></li>
+                      <li><a id="nav" href="{% url 'camera:index'%}">몰래카메라</a></li>
+                      <li><a id="nav" href="{% url 'community:index'%}">커뮤니티</a></li>
+                  </ul>
                 </div>
             </div>
         </div>
