@@ -21,7 +21,7 @@ from openSource.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^camera/', include('camera.urls', namespace='camera')),
-    url(r'^crimer/', include('crimer.urls', namespace='crimer')),
+    # url(r'^crimer/', include('crimer.urls', namespace='crimer')),
     # url(r'^community/', include('community.urls', namespace='community')),
     url(r'^introduce/', include('introduce.urls', namespace='introduce')),
     url(r'^com/', include('jejudaum.urls', namespace='jejudaum')),
