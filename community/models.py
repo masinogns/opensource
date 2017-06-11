@@ -4,11 +4,13 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 class Community(models.Model):
-    name = models.CharField(max_length=200)
-    order = models.IntegerField()
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    create_date = models.DateTimeField( #날째
+            blank=True, null=True, auto_now_add = True);
 
-    def __unicode__(self):
-        return self.name
+    class Meta:
+        ordering = ['-create_date']
 
-    def get_absolute_url(self):
-        return reverse('community_edit', kwargs={'pk': self.pk})
+    def __str__(self):
+        return self.title
