@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <style media="screen">
+      .ha{
+        width: 180px;
+        height: 40px;
+        border-radius: 12px;
+
+      }
+      .gl{
+        font-size: 25px;
+        padding-right: 10px;
+      }
+
+      .search-box{
+        margin-top: 5px;
+      }
+
+      .col-md-3{
+        width:25%;
+        height:  500px;
+      }
+      .col-md-9{
+        width:75%;
+        height:  500px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default ">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/" ><span style="color: rgb(104, 164, 196);">안</span>심벨</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><a href="{% url 'introduce:index'%}">안심벨 소개</a></li>
+          <li><a href="{% url 'crimer:index'%}">성범죄자</a></li>
+          <li><a href="{% url 'camera:index'%}">몰래카메라</a></li>
+          <li><a href="{% url 'community:index'%}">커뮤니티</a></li>
+          <li class="search-box"><span class="glyphicon glyphicon-search gl"></span><input type="text" name="" value="" class="ha"></li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    {%block content%}{%endblock%}
