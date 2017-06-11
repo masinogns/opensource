@@ -9,11 +9,51 @@
 
 {%block onetitle%}몰래카메라란?{%endblock%}
 {%block twotitle%}몰래카메라 피해 상황{%endblock%}
-{%block threetitle%}몰래카메라 구별법{%endblock%}
+{%block threetitle%}몰래카메라 종류{%endblock%}
 {%block fourtitle%}몰래카메라 예방법{%endblock%}
+
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 75%;
+    /*height: 250px;*/
+    background-color: lightgrey;
+}
+
+img.col-md-3 {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+img.col-md-3:hover{
+  background-color: : rgba(196, 94, 94, 0.5);
+}
+</style>
 
 
 {%block content%}
+<h3>몰래카메라는 애초에 목적이 사람들에게 발각되지 않고 촬영하기 위한 것이기 때문에 사실상 몰래카메라를 완벽하게 구별하거나 찾아내기는 어렵습니다. 몰래카메라 탐지기가 있기는 하지만 일반인들이 탐지기를 가지고 다니며 사용하는 것은 현실성이 없기 때문에 몰래카메라에 한없이 무방비할 수밖에 없습니다.
+화장실 같은 곳에서는 항상 주변을 경계하고 이상한 점이 있는지 체크하는 습관을 가져야 합니다.
+</h3>
 
+<div class="flex-container">
+
+
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 넥타이형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 단추형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 라이터형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 마우스형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 모자형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 보온병형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 볼펜형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 스위치형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 안경형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 액자형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 차키형.JPG'%}" alt="">
+<img class="col-md-3" src="{% static 'img/camera/몰래카메라 usb형.JPG'%}" alt="">
+</div>
 
 {%endblock content%}
