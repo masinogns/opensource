@@ -58,8 +58,8 @@
 </style>
 <body>
 <div id="wrapper">
-	<!-- start header -->
-	<header>
+   <!-- start header -->
+   <header>
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -71,7 +71,7 @@
                     <a href="/"><img src="{% static 'img/logo.png' %}" alt="" style="width:200px;"></a>
                 </div>
                 <div class="navbar-collapse collapse ">
-									<ul class="nav navbar-nav">
+                           <ul class="nav navbar-nav">
                       <li><a id="nav" href="{% url 'introduce:index'%}">안심벨 소개</a></li>
                       <li><a id="nav" href="{% url 'camera:index'%}">몰래카메라</a></li>
                       <li><a id="nav" href="{% url 'jejudaum:room_list'%}">커뮤니티</a></li>
@@ -79,168 +79,169 @@
 
 
 
-										{% if user.is_active %}
-											<ul class="nav navbar-nav">
-													<li class="login-hover"><a href="#">{% firstof user.get_short_name user.get_username %}</a></li>
-													<li class="login-hover"><a href="#">내 게시글</a></li>
-													<li class="login-hover"><a href="{% url 'password_change' %}"><span class="glyphicon glyphicon-log-in"></span> 비밀번호 변경</a></li>
-													<li class="login-hover"><a href="{% url 'logout'%}"><span class="glyphicon glyphicon-pencil"></span> 로그아웃</a></li>
-											</ul>
-										{% else %}
-										<ul class="nav navbar-nav">
-											<li class="login-hover"><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
-											<li class="login-hover"><a href="{% url 'register'%}"><span class="glyphicon glyphicon-pencil"></span> 회원가입</a></li>
-										</ul>
-										{% endif %}
+                              {% if user.is_active %}
+                                 <ul class="nav navbar-nav">
+                                       <li class="login-hover"><a href="#">{% firstof user.get_short_name user.get_username %}</a></li>
+                                       <li class="login-hover"><a href="#">내 게시글</a></li>
+                                       <li class="login-hover"><a href="{% url 'password_change' %}"><span class="glyphicon glyphicon-log-in"></span> 비밀번호 변경</a></li>
+                                       <li class="login-hover"><a href="{% url 'logout'%}"><span class="glyphicon glyphicon-pencil"></span> 로그아웃</a></li>
+                                 </ul>
+                              {% else %}
+                              <ul class="nav navbar-nav">
+                                 <li class="login-hover"><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+                                 <li class="login-hover"><a href="{% url 'register'%}"><span class="glyphicon glyphicon-pencil"></span> 회원가입</a></li>
+                              </ul>
+                              {% endif %}
                 </div>
 
             </div>
         </div>
-	</header>
-	<!-- end header -->
-	<section id="featured">
-	<!-- start slider -->
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-	<!-- Slider -->
+   </header>
+   <!-- end header -->
+   <section id="featured">
+   <!-- start slider -->
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+   <!-- Slider -->
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
-                <img src="{% static 'img/slides/1.jpg' %}" alt="" />
+                <img src="{% static 'img/lolo1.jpeg' %}" alt="" width="700" height="450"/>
                 <div class="flex-caption">
-                    <h3>Modern Design</h3>
-					<p>Duis fermentum auctor ligula ac malesuada. Mauris et metus odio, in pulvinar urna</p>
-					<a href="#" class="btn btn-theme">Learn More</a>
+                    <h3>안심벨 소개</h3>
+               <p>안심벨에 대한 모든 정보를 알려주는 페이지입니다.</p>
+               <a href="{% url 'introduce:index'%}" class="btn btn-theme">더알아보기</a>
                 </div>
               </li>
               <li>
-                <img src="{% static 'img/slides/2.jpg' %}" alt="" />
+                <img src="{% static 'img/lolo2.jpeg' %}" alt="" width="700" height="450"/>
                 <div class="flex-caption">
-                    <h3>Fully Responsive</h3>
-					<p>Sodales neque vitae justo sollicitudin aliquet sit amet diam curabitur sed fermentum.</p>
-					<a href="#" class="btn btn-theme">Learn More</a>
+                    <h3>몰래카메라</h3>
+               <p>몰래카메라에 대한 모든 정보를 알려주는 페이지입니다.</p>
+               <a href="{% url 'camera:index'%}" class="btn btn-theme">더알아보기</a>
                 </div>
               </li>
               <li>
-                <img src="{% static 'img/slides/3.jpg' %}" alt="" />
+                <img src="{% static 'img/lolo3.jpeg' %}" alt="" width="700" height="450"/>
                 <div class="flex-caption">
-                    <h3>Clean Fast</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit donec mer lacinia.</p>
-					<a href="#" class="btn btn-theme">Learn More</a>
+                    <h3>커뮤니티</h3>
+               <p>다양한 정보를 공유할 수 있는 자유로운 게시판입니다.</p>
+               <a href="{% url 'jejudaum:room_list'%}" class="btn btn-theme">더알아보기</a>
                 </div>
               </li>
             </ul>
         </div>
-	<!-- end slider -->
-			</div>
-		</div>
-	</div>
+   <!-- end slider -->
+         </div>
+      </div>
+   </div>
 
 
 
-	</section>
-	<section class="callaction">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="big-cta">
-					<div class="cta-text">
-						<h2><span>Moderna</span> HTML Business Template</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</section>
-	<section id="content">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="row">
-					<div class="col-lg-3">
-						<div class="box">
-							<div class="box-gray aligncenter">
-								<h4>Fully responsive</h4>
-								<div class="icon">
-								<i class="fa fa-desktop fa-3x"></i>
-								</div>
-								<p>
-								 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-								</p>
+   </section>
+   <section class="callaction">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="big-cta">
+               <div class="cta-text">
+                  <h2><span>여러분</span>은 과연 안전하다고 생각하십니까?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </section>
+   <section id="content">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="row">
+               <div class="col-lg-3">
+                  <div class="box">
+                     <div class="box-gray aligncenter">
+                        <h4>안심벨 소개</h4>
+                        <div class="icon">
+                        <i class="fa fa-desktop fa-3x"></i>
+                        </div>
+                        <p>
+                         안심벨에 대한 모든 정보를 알려주는 페이지입니다.
+                        </p>
 
-							</div>
-							<div class="box-bottom">
-								<a href="{% url 'introduce:index'%}">Learn more</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="box">
-							<div class="box-gray aligncenter">
-								<h4>Modern Style</h4>
-								<div class="icon">
-								<i class="fa fa-pagelines fa-3x"></i>
-								</div>
-								<p>
-								 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-								</p>
+                     </div>
+                     <div class="box-bottom">
+                        <a href="{% url 'introduce:index'%}">더알아보기</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="box">
+                     <div class="box-gray aligncenter">
+                        <h4>몰래카메라</h4>
+                        <div class="icon">
+                        <i class="fa fa-pagelines fa-3x"></i>
+                        </div>
+                        <p>
+                         몰래카메라에 대한 모든 정보를 알려주는 페이지입니다.
+                        </p>
 
-							</div>
-							<div class="box-bottom">
-								<a href="#">Learn more</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="box">
-							<div class="box-gray aligncenter">
-								<h4>Customizable</h4>
-								<div class="icon">
-								<i class="fa fa-edit fa-3x"></i>
-								</div>
-								<p>
-								 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-								</p>
+                     </div>
+                     <div class="box-bottom">
+                        <a href="{% url 'camera:index'%}">더알아보기</a>
+                     </div>
+                  </div>
+               </div>
 
-							</div>
-							<div class="box-bottom">
-								<a href="{% url 'camera:index'%}">Learn more</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="box">
-							<div class="box-gray aligncenter">
-								<h4>Valid HTML5</h4>
-								<div class="icon">
-								<i class="fa fa-code fa-3x"></i>
-								</div>
-								<p>
-								 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-								</p>
+               <div class="col-lg-3">
+                  <div class="box">
+                     <div class="box-gray aligncenter">
+                        <h4>커뮤니티</h4>
+                        <div class="icon">
+                        <i class="fa fa-edit fa-3x"></i>
+                        </div>
+                        <p>
+                         다양한 정보를 공유할 수 있는 자유로운 게시판입니다.
+                        </p>
 
-							</div>
-							<div class="box-bottom">
-								<a href="{% url 'jejudaum:index'%}">Learn more</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- divider -->
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="solidline">
-				</div>
-			</div>
-		</div>
-		<!-- end divider -->
+                     </div>
+                     <div class="box-bottom">
+                        <a href="{% url 'jejudaum:room_list'%}">더알아보기</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="box">
+                     <div class="box-gray aligncenter">
+                        <h4>회원가입</h4>
+                        <div class="icon">
+                        <i class="fa fa-code fa-3x"></i>
+                        </div>
+                        <p>
+                        회원가입을 하면 더 간편하게 사용할 수 있습니다.
+                        </p>
 
-	<footer class="container">
-	<h3>현아, 유형, 기훈의 오픈소스 클래스 프로젝트입니다.</h3>
-	</footer>
+                     </div>
+                     <div class="box-bottom">
+                        <a href="{% url 'register'%}">더알아보기</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- divider -->
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="solidline">
+            </div>
+         </div>
+      </div>
+      <!-- end divider -->
+
+   <footer class="container">
+   <h3>현아, 유형, 기훈의 오픈소스 클래스 프로젝트입니다.</h3>
+   </footer>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
